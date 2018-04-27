@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+function returnBig(x) {
+    x.style.height = "1000";
+    x.style.width = "1000";
+}
+
+function returnNormal(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+}
+    </script>
+</head>
+<body style="background-color:aqua">
+    <div id="first">
+        <div id="top"><p>
+    Online shopping is a form of electronic commerce which allows consumers
+    to directly buy goods or services from a seller over the Internet using a web browser.
+    Consumers find a product of interest by visiting the website of the retailer
+    directly or by searching among alternative vendors using a shopping search engine.
+</p></div>
+        <div id="bottom">
+            <div id="Content_Left">Ladies Collection<a href="images.html">
+              <img src="1.jpg" height="500" width="500" onmouseover="returnBig(this)" onmouseout="returnNormal(this)"/></a></div>
+            <div id="Content_Right">Gents Collection<a href="gImages.html">
+              <img src="3g.jpg" height="500" width="500" onmouseover="returnBig(this)" onmouseout="returnNormal(this)" /></a></div>
+        </div>
+    </div>
+</body>
+</html>

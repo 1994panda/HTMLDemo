@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function validation() {
+            var name = document.forms["valf"]["uname"];
+            var email = document.forms["valf"]["mailid"];
+            var phone = document.forms["valf"]["number"];
+            var password = document.forms["valf"]["pswd"];
+            if (name.value == "") {
+                window.alert("Please enter your name.");
+                name.focus();
+                return false;
+            }
+
+            if (email.value == "") {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+            if (phone.value == "") {
+                window.alert("Please enter your telephone number.");
+                phone.focus();
+                return false;
+            }
+
+            if (password.value == "") {
+                window.alert("Please enter your password");
+                password.focus();
+                return flase;
+            }
+
+           // return true;
+            var isValid = "true";
+            if (isValid) {
+                window.open("successful.html", "_self");
+            } else {
+                return false;
+            }
+        }
+    </script>
+</head>
+<body style="background-color:aqua">
+    <form name="valf" action="successful.html" method="post"onsubmit="validation()">
+        <table align="center">
+            <tr><td>Enter UserName:</td><td><input  type="text" name="uname" maxlength="30"/></td></tr>
+           <tr> <td>Enter Contact Number</td><td><input type="number" name="number" maxlength="10"/></td></tr>
+            <tr><td>Enter Email Id:</td><td><input type="email" name="mailid" /></td></tr>
+            <tr><td>Enter Password:</td><td><input type="password" name="pswd" /></td></tr>
+            <tr><td>Confirm Password:</td><td><input type="password" name="pswd" /></td></tr>
+            <tr><td>Enter Date of Birth:</td><td><input type="date" name="DOB" /></td></tr>
+            <tr><td>Select gender:</td><td><input type="radio" name="gender" value="Male"/></td>
+            <td><input type="radio" name="gender" value="Female"/></td></tr>
+            <tr><td>Accept:</td><td><input type="checkbox"/></td></tr>
+            <tr><td align="center"><input type="submit" name="register" value="Register" /></td></tr>
+        </table>
+    </form>
+</body>
+</html>
